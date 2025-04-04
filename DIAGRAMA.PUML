@@ -1,0 +1,72 @@
+@startuml
+class Jugador
+{
+    +Jugar(Partida):Puntos
+}
+
+class Partida
+{
+    +Analizar(numeros):Victoria
+}
+
+class Campo
+class Mina
+class Casilla
+class Numero
+class CasillaVacia
+class Marcador
+class Cronometro
+class Alerta
+class Movimiento
+{
+    +Mover(campo):Exponer Casilla
+}
+
+class Destapar
+class Marcar
+class Estado
+class Marcada
+class Oculta
+class Descubierta
+class Configuracion
+
+class TamañoTablero
+class Dificultad
+class Interfaz
+class Juego
+class Opcion
+class Ayuda
+class Emoji
+class Intermedio
+class Basico
+class Avanzado
+
+Jugador o-- Partida
+Partida *-- Campo
+Partida *-- Marcador
+Partida *-- Cronometro
+Partida *-- Emoji
+Partida *-- Alerta
+Partida *-- Configuracion
+Partida *-- Interfaz
+Jugador *-- Movimiento
+Configuracion *-- Dificultad
+Configuracion *-- TamañoTablero
+Campo *-- Casilla
+Campo "0" *-- "Infinito" Mina
+Interfaz <|-- Juego
+Interfaz <|-- Opcion
+Interfaz <|-- Ayuda
+Casilla *-- Estado
+Estado <|-- Marcada
+Estado <|-- Oculta
+Estado <|-- Descubierta
+Movimiento <|-- Destapar
+Movimiento <|-- Marcar
+Casificultad <|-- Basico
+Dificultad <|-- Avanzado
+Dificultad <|-- Intermedio
+
+@endumllla "0" -- "Infinito" Numero
+Casilla "0" -- "Infinito" CasillaVacia
+
