@@ -9,3 +9,10 @@ $(EXE) : src/main.cpp
 
 run : $(EXE)
 	./$<
+
+	
+memoria : src/memoria.cpp./$<
+
+
+bin/memoria : src/memoria.cpp
+    $(CXX) $< -o $@ $(LIB) $(INCLUDE) -std=c++17
