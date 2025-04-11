@@ -11,8 +11,9 @@ run : $(EXE)
 	./$<
 
 	
-memoria : src/memoria.cpp./$<
+archivos : src/archivos.cpp./$<
 
 
-bin/memoria : src/memoria.cpp
+bin/archivos : src/archivos.cpp
     $(CXX) $< -o $@ $(LIB) $(INCLUDE) -std=c++17
+	
