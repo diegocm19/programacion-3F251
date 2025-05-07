@@ -17,3 +17,10 @@ archivos : src/archivos.cpp./$<
 bin/archivos : src/archivos.cpp
     $(CXX) $< -o $@ $(LIB) $(INCLUDE) -std=c++17
 	
+
+pokedex : src/pokedex.cpp./$<
+
+
+bin/pokedex : src/pokedex.cpp
+    $(CXX) $< -o $@ $(LIB) $(INCLUDE) -std=c++17
+	
